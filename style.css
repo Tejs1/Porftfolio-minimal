@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=CircularStd-Book:wght@300&family=Open+Sans&family=CircularStd-Book&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --primary-heding: #000000;
+  --links: #000000;
+  --heading: #000000;
+  --dark-back: #eeeeee;
+  --dark-blue: #fafafa;
+  --text: #000000;
+}
+body {
+  font-family: "CircularStd-Book", sans-serif;
+  background-color: var(--dark-back);
+  max-height: 100vh;
+}
+
+h2 {
+  font-family: CircularStd-Book;
+  margin-left: 0.2rem;
+  letter-spacing: 2px;
+}
+h1 {
+  color: var(--primary-heding);
+  font-family: CircularStd-Book;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-style: normal;
+  font-weight: 400;
+}
+#dev {
+  margin-top: 0.8rem;
+}
+p {
+  font-family: CircularStd-Book;
+  margin-left: 0.2rem;
+}
+section {
+  font-family: CircularStd-Book;
+  letter-spacing: 2px;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--dark-back);
+}
+
+.navbar h1 {
+  font-family: "CircularStd-Book";
+  border-right: 2px solid var(--heading);
+  color: var(--primary-heding);
+  padding-right: 0.9rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.navbar h1 a {
+  color: var(--primary-heding);
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.navbar ul a {
+  margin: 0rem 1rem;
+  padding: 0.3rem 1rem;
+  color: var(--heading);
+  border-bottom: 2px solid var(--heading);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.navbar ul a:hover {
+  border-radius: 10px;
+  color: var(--dark-back);
+  background-color: var(--heading);
+}
+
+.project a {
+  color: var(--links);
+}
+@media screen and (min-width: 360px) and (max-width: 640px) {
+  .navbar {
+    padding-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: var(--dark-back);
+    padding-bottom: 1rem;
+  }
+  .navbar h1 {
+    font-family: Hatton-Regular;
+    font-size: 34px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+  }
+  .navbar h1 a {
+    color: var(--primary-heding);
+  }
+  .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    margin: auto;
+  }
+  .navbar ul a {
+    font-size: 16px;
+    padding: 0.3rem 0.8rem;
+    color: var(--heading);
+    border-bottom: 1px solid var(--heading);
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  .navbar ul a:hover {
+    border-radius: 10px;
+    color: white;
+    background-color: var(--heading);
+  }
+}
+
+main {
+  background-color: var(--dark-blue);
+  padding: 2rem 1rem 2rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+main img {
+  margin-top: 0rem;
+  width: 600px;
+  padding-left: 1rem;
+}
+
+main .main-img1 {
+  display: none;
+}
+
+.active {
+  font-weight: bold;
+  background-color: var(--dark-blue);
+  border-radius: 0.5rem;
+}
+
+.main-content {
+  max-width: 550px;
+}
+
+.main-content h1 {
+  font-size: 2.8rem;
+  padding-bottom: 0rem;
+}
+
+.main-content h2 {
+  padding-bottom: 0.5rem;
+  color: var(--heading);
+}
+
+.main-content p {
+  max-width: 500px;
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+  color: var(--heading);
+}
+
+.main-content a {
+  font-size: 2.6rem;
+  margin-right: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: var(--links);
+}
+
+.main-content a:hover {
+  color: var(--heading);
+}
+
+.heading-span {
+  color: var(--primary-heding);
+}
+
+h2 {
+  color: var(--heading);
+}
+
+@media screen and (min-width: 360px) and (max-width: 640px) {
+  main {
+    background-color: var(--dark-blue);
+    padding: 0.6rem 1rem 2rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  main img {
+    width: 400px;
+  }
+  main .main-img2 {
+    display: none;
+  }
+  main .main-img1 {
+    display: inherit;
+  }
+  .main-content {
+    text-align: center;
+    max-width: 550px;
+  }
+  .main-content h1 {
+    margin-top: 0rem;
+    font-size: 2.4rem;
+  }
+  .main-content h2 {
+    font-size: 1.6rem;
+    padding-bottom: 0.3rem;
+  }
+  .main-content p {
+    /* max-width: 400px; */
+    font-size: 1.2rem;
+  }
+  .main-content a {
+    font-size: 2.6rem;
+    margin-left: 1rem;
+  }
+  /* .container section .btn-links {
+    background-color: #d8e3e7;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.5rem;
+  } */
+}
+
+.container {
+  padding-bottom: 2rem;
+  padding-top: 3rem;
+  max-width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: auto;
+}
+
+.container h2 {
+  text-align: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-family: "CircularStd-Book", sans-serif;
+  border-bottom: 2px solid var(--heading);
+  color: var(--heading);
+  font-size: 2.4rem;
+}
+
+.container section {
+  margin: 1.4rem 0rem;
+  padding: 2rem 4rem;
+}
+
+.container section p {
+  max-width: 600px;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.container section .btn-links {
+  background-color: var(--dark-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 60%;
+  margin: 10px 0px;
+}
+.container section a {
+  text-decoration: underline;
+}
+
+.container section a:focus {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.page-headings {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--dark-blue);
+}
+
+.footer h1 {
+  font-size: 2.4rem;
+  font-family: "CircularStd-Book", sans-serif;
+  margin: 1rem 0rem;
+  color: var(--primary-heding);
+}
+
+.footer p {
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+  color: var(--text);
+}
+
+.footer small {
+  margin-bottom: 1.2rem;
+  color: var(--text);
+}
+
+.social-links {
+  padding: 1rem;
+}
+
+.social-links a {
+  font-size: 1.4rem;
+  padding: 0rem 1rem;
+  color: var(--primary-heding);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.socials a:hover {
+  color: #c8c8c8;
+}
+.social-links a:hover {
+  color: #c8c8c8;
+}
+
+.social-links .mid-line {
+  border-right: 1px solid var(--text);
+}
+/*# sourceMappingURL=style.css.map */
+
+.container p {
+  font-size: 1.3rem;
+}
