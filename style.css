@@ -6,16 +6,13 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-heding: #000000;
-  --links: #000000;
-  --heading: #000000;
-  --dark-back: #eeeeee;
-  --dark-blue: #fafafa;
-  --text: #000000;
+  --black: #000000;
+  --whiteo: #fafafa;
+  --white: #eeeeee;
 }
 body {
   font-family: "CircularStd-Book", sans-serif;
-  background-color: var(--dark-back);
+  background-color: var(--whiteo);
   max-height: 100vh;
 }
 
@@ -25,7 +22,7 @@ h2 {
   letter-spacing: 2px;
 }
 h1 {
-  color: var(--primary-heding);
+  color: var(--black);
   font-family: CircularStd-Book;
   font-size: 14px;
   letter-spacing: 2px;
@@ -62,13 +59,13 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--dark-back);
+  background-color: var(--whiteo);
 }
 
 .navbar h1 {
   font-family: "CircularStd-Book";
-  border-right: 2px solid var(--heading);
-  color: var(--primary-heding);
+  border-right: 2px solid var(--black);
+  color: var(--black);
   padding-right: 0.9rem;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -77,7 +74,7 @@ a {
 }
 
 .navbar h1 a {
-  color: var(--primary-heding);
+  color: var(--black);
 }
 
 .navbar ul {
@@ -96,20 +93,20 @@ a {
 .navbar ul a {
   margin: 0rem 1rem;
   padding: 0.3rem 1rem;
-  color: var(--heading);
-  border-bottom: 2px solid var(--heading);
+  color: var(--black);
+  border-bottom: 2px solid var(--black);
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
 .navbar ul a:hover {
   border-radius: 10px;
-  color: var(--dark-back);
-  background-color: var(--heading);
+  color: var(--whiteo);
+  background-color: var(--black);
 }
 
 .project a {
-  color: var(--links);
+  color: var(--black);
 }
 @media screen and (min-width: 360px) and (max-width: 640px) {
   .navbar {
@@ -127,7 +124,7 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: var(--dark-back);
+    background-color: var(--whiteo);
     padding-bottom: 1rem;
   }
   .navbar h1 {
@@ -139,7 +136,7 @@ a {
     border: none;
   }
   .navbar h1 a {
-    color: var(--primary-heding);
+    color: var(--black);
   }
   .navbar ul {
     display: -webkit-box;
@@ -157,20 +154,20 @@ a {
   .navbar ul a {
     font-size: 16px;
     padding: 0.3rem 0.8rem;
-    color: var(--heading);
-    border-bottom: 1px solid var(--heading);
+    color: var(--black);
+    border-bottom: 1px solid var(--black);
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
   .navbar ul a:hover {
     border-radius: 10px;
     color: white;
-    background-color: var(--heading);
+    background-color: var(--black);
   }
 }
 
 main {
-  background-color: var(--dark-blue);
+  background-color: var(--white);
   padding: 2rem 1rem 2rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -195,7 +192,7 @@ main .main-img1 {
 
 .active {
   font-weight: bold;
-  background-color: var(--dark-blue);
+  background-color: var(--white);
   border-radius: 0.5rem;
 }
 
@@ -210,14 +207,14 @@ main .main-img1 {
 
 .main-content h2 {
   padding-bottom: 0.5rem;
-  color: var(--heading);
+  color: var(--black);
 }
 
 .main-content p {
   max-width: 500px;
   line-height: 1.5rem;
   padding-bottom: 1rem;
-  color: var(--heading);
+  color: var(--black);
 }
 
 .main-content a {
@@ -225,24 +222,24 @@ main .main-img1 {
   margin-right: 1rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  color: var(--links);
+  color: var(--black);
 }
 
 .main-content a:hover {
-  color: var(--heading);
+  color: var(--black);
 }
 
 .heading-span {
-  color: var(--primary-heding);
+  color: var(--black);
 }
 
 h2 {
-  color: var(--heading);
+  color: var(--black);
 }
 
 @media screen and (min-width: 360px) and (max-width: 640px) {
   main {
-    background-color: var(--dark-blue);
+    background-color: var(--white);
     padding: 0.6rem 1rem 2rem 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -322,8 +319,8 @@ h2 {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   font-family: "CircularStd-Book", sans-serif;
-  border-bottom: 2px solid var(--heading);
-  color: var(--heading);
+  border-bottom: 2px solid var(--black);
+  color: var(--black);
   font-size: 2.4rem;
 }
 
@@ -335,14 +332,14 @@ h2 {
 .container section p {
   max-width: 600px;
   margin-bottom: 1rem;
-  color: var(--text);
+  color: var(--black);
 }
 
 .container section .btn-links {
-  background-color: var(--dark-blue);
+  background-color: var(--white);
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  color: var(--text);
+  color: var(--black);
   text-decoration: none;
   font-size: 1.2rem;
   display: inline-block;
@@ -378,25 +375,25 @@ h2 {
   flex-direction: column;
   padding: 2rem;
   text-align: center;
-  background-color: var(--dark-blue);
+  background-color: var(--white);
 }
 
 .footer h1 {
   font-size: 2.4rem;
   font-family: "CircularStd-Book", sans-serif;
   margin: 1rem 0rem;
-  color: var(--primary-heding);
+  color: var(--black);
 }
 
 .footer p {
   margin-top: 1rem;
   margin-bottom: 0.2rem;
-  color: var(--text);
+  color: var(--black);
 }
 
 .footer small {
   margin-bottom: 1.2rem;
-  color: var(--text);
+  color: var(--black);
 }
 
 .social-links {
@@ -406,7 +403,7 @@ h2 {
 .social-links a {
   font-size: 1.4rem;
   padding: 0rem 1rem;
-  color: var(--primary-heding);
+  color: var(--black);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
 }
@@ -418,7 +415,7 @@ h2 {
 }
 
 .social-links .mid-line {
-  border-right: 1px solid var(--text);
+  border-right: 1px solid var(--black);
 }
 /*# sourceMappingURL=style.css.map */
 
