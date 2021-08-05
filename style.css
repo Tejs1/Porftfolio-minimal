@@ -11,7 +11,7 @@
   --white: #eeeeee;
 }
 body {
-  font-family: "CircularStd-Book", sans-serif;
+  font-family: "CircularStd-Book";
   background-color: var(--whiteo);
   max-height: 100vh;
 }
