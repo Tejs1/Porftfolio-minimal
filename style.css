@@ -5,10 +5,17 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+#animation {
+  padding: 0%;
+  margin: 0%;
+  height: 100vh;
+  width: 100vw;
+}
+
 :root {
   --black: #000000;
-  --whiteo: #fafafa;
-  --white: #eeeeee;
+  --whiteo: #none;
+  --white: none;
 }
 body {
   font-family: "CircularStd-Book";
