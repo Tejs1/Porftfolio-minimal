@@ -1,4 +1,4 @@
-VANTA.NET({
+VANTA.GLOBE({
   el: "#animation",
   mouseControls: true,
   touchControls: true,
@@ -7,4 +7,6 @@ VANTA.NET({
   minWidth: 200.0,
   scale: 1.0,
   scaleMobile: 1.0,
+  color2: 0xf50000,
+  backgroundColor: 0xfdf8f3,
 });

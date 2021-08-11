@@ -1,20 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=CircularStd-Book:wght@300&family=Open+Sans&family=CircularStd-Book&display=swap");
 * {
   padding: 0%;
   margin: 0%;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 #animation {
   padding: 0%;
   margin: 0%;
+  border: 0%;
   height: 100vh;
   width: 100vw;
 }
 
 :root {
   --black: #000000;
-  --whiteo: #none;
+  --whiteo: #fdf8f3;
   --white: none;
 }
 body {
@@ -66,7 +64,7 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--whiteo);
+  background-color: #fdf8f39b;
 }
 
 .navbar h1 {
@@ -108,8 +106,7 @@ a {
 
 .navbar ul a:hover {
   border-radius: 10px;
-  color: var(--whiteo);
-  background-color: var(--black);
+  background-color: #ff00003b;
 }
 
 .project a {
@@ -175,7 +172,7 @@ a {
 
 main {
   background-color: var(--white);
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 0rem 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,7 +187,7 @@ main {
 main img {
   margin-top: 0rem;
   width: 600px;
-  padding-left: 1rem;
+  padding-left: 0rem;
 }
 
 main .main-img1 {
@@ -305,18 +302,12 @@ h2 {
   padding-bottom: 2rem;
   padding-top: 3rem;
   max-width: 900px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin: auto;
 }
@@ -380,7 +371,7 @@ h2 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 0rem 2rem 0rem;
   text-align: center;
   background-color: var(--white);
 }
@@ -424,8 +415,10 @@ h2 {
 .social-links .mid-line {
   border-right: 1px solid var(--black);
 }
-/*# sourceMappingURL=style.css.map */
 
 .container p {
   font-size: 1.3rem;
+}
+.twitter-tweet {
+  margin: auto;
 }
