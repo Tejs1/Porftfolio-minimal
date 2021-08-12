@@ -11,7 +11,7 @@ var returnArr = [0, 0, 0, 0, 0, 0, 0];
 btnAction.addEventListener("click", () => {
   if (btnAction.innerText === "Next") {
     if (isaNummber(Number(billamount.value))) {
-      cash.classList.remove("hidden");
+      cash.classList.toggle("hidden");
       btnAction.innerHTML = "Check";
     } else {
       change.innerHTML = "Enter Valid Integer Bill amount";

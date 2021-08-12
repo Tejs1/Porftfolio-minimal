@@ -5,7 +5,7 @@
 }
 
 :root {
-  --primary-color: #ff000086;
+  --primary-color: #ff00006c;
   --secondary-color: #fdf8f3;
   --dark-color: #111;
 }
@@ -50,6 +50,7 @@ body {
 .container input[type="number"] {
   background-color: var(--secondary-color);
   font-size: 1.2rem;
+  outline: none;
   border: none;
   border-radius: 15px;
   padding: 0.5rem;
@@ -63,15 +64,17 @@ body {
   border-radius: 15px;
   padding: 0.6rem 1.2rem;
   margin-bottom: 1rem;
-  border: 1px solid var(--secondary-color);
   background-color: var(--secondary-color);
   color: var(--dark-color);
   transition: background 0.5s;
+  outline: none;
+  border: none;
 }
 
 .btn:hover {
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  outline: none;
 }
 
 .returnDiv table {
