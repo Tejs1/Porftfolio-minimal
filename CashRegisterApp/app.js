@@ -1,68 +1,126 @@
-var billAmount = document.querySelector("#billAmount");
-var nextBtn = document.querySelector(".nextBtn");
-var checkBtn = document.querySelector(".calBtn");
+var btnAction = document.querySelector(".action");
+var cash = document.querySelector(".cash");
 var cashGiven = document.querySelector("#cashGiven");
-var notesRequired = document.querySelector("#notesRequired");
-var errorMessage = document.querySelector("#errorMessage");
-var displayBox = document.querySelector(".displayBox");
-var cashBox = document.querySelector(".cashBox");
+var billamount = document.querySelector("#billamount");
+var table = document.querySelector(".table");
+var change = document.querySelector(".change");
+var returnDiv = document.querySelector(".returnDiv");
+var notesArr = [2000, 500, 100, 20, 10, 5, 1];
+var returnArr = [0, 0, 0, 0, 0, 0, 0];
 
-cashBox.style.display = "none";
-displayBox.style.display = "none";
-
-var numberOfNotes;
-
-const notes = [2000, 500, 100, 50, 20, 10, 5, 1];
-
-nextBtn.addEventListener("click", checkBillAmount);
-checkBtn.addEventListener("click", calculate);
-
-function checkBillAmount() {
-  if (billAmount.value > 0) {
-    cashBox.style.display = "flex";
-  } else {
-    showMessage("Bill Amount is not Valid");
-  }
-}
-
-function calculate() {
-  if (Number(cashGiven.value) >= Number(billAmount.value)) {
-    const amountToReturn = cashGiven.value - billAmount.value;
-    returnChange(amountToReturn);
-  } else {
-    showMessage("Note:Cash should be great than Bill amount");
-  }
-}
-function showMessage(message) {
-  errorMessage.style.display = "block";
-  errorMessage.innerHTML = message;
-}
-
-function returnChange(amountToReturn) {
-  displayBox.style.display = "flex";
-
-  var amount = amountToReturn;
-
-  for (i = 0; i < notes.length; i++) {
-    console.log("amount:" + amount);
-    console.log("currentnote:" + notes[i]);
-
-    numberOfNotes = Math.trunc(amount / notes[i]);
-
-    console.log("numberofnotes" + numberOfNotes);
-
-    if (numberOfNotes > 0) {
-      display(numberOfNotes, notes[i]);
+btnAction.addEventListener("click", () => {
+  if (btnAction.innerText === "Next") {
+    if (isaNummber(Number(billamount.value))) {
+      cash.classList.remove("hidden");
+      btnAction.innerHTML = "Check";
+    } else {
+      change.innerHTML = "Enter Valid Integer Bill amount";
     }
-    amount = amount % notes[i];
+  } else if (btnAction.innerText === "Check") {
+    if (
+      isaNummber(Number(billamount.value)) &&
+      isaNummber(Number(cashGiven.value))
+    ) {
+      var balanceAmount = Number(cashGiven.value) - Number(billamount.value);
+      if (balanceAmount === 0) {
+        returnDiv.classList.add("hidden");
+        change.innerText = `Customer gave exact amount. No Return amount`;
+      } else if (balanceAmount > 0) {
+        returnArr = [0, 0, 0, 0, 0, 0, 0];
+        var remainingAmount = balanceAmount;
+        for (var i = 0; i < notesArr.length; i++) {
+          returnArr[i] = Number.parseInt(remainingAmount / notesArr[i]);
+          remainingAmount = remainingAmount - returnArr[i] * notesArr[i];
+        }
+        updateTable(returnArr);
+        returnDiv.classList.remove("hidden");
+      } else {
+        returnDiv.classList.add("hidden");
+        change.innerText = `Customer still need's to give ${
+          Number(billamount.value) - Number(cashGiven.value)
+        } or more`;
+      }
+    } else {
+      change.innerHTML = "Enter Valid Integer for Bill and CASH amount";
+    }
+  }
+});
+
+function isaNummber(checkElement) {
+  if (checkElement > 0 && Number.isInteger(checkElement)) {
+    change.innerHTML = "";
+    return true;
+  } else {
+    return false;
   }
 }
 
-function hideMessage() {
-  errorMessage.style.display = "none";
+function updateTable(givenArr) {
+  tbody = table.tBodies[0];
+  for (var i = 0; i < givenArr.length; i++) {
+    tbody.rows[i].cells[1].innerText = givenArr[i];
+  }
+}
+var btnAction = document.querySelector(".action");
+var cash = document.querySelector(".cash");
+var cashGiven = document.querySelector("#cashGiven");
+var billamount = document.querySelector("#billamount");
+var table = document.querySelector(".table");
+var change = document.querySelector(".change");
+var returnDiv = document.querySelector(".returnDiv");
+var notesArr = [2000, 500, 100, 20, 10, 5, 1];
+var returnArr = [0, 0, 0, 0, 0, 0, 0];
+
+btnAction.addEventListener("click", () => {
+  if (btnAction.innerText === "Next") {
+    if (isaNummber(Number(billamount.value))) {
+      cash.classList.remove("hidden");
+      btnAction.innerHTML = "Check";
+    } else {
+      change.innerHTML = "Enter Valid Integer Bill amount";
+    }
+  } else if (btnAction.innerText === "Check") {
+    if (
+      isaNummber(Number(billamount.value)) &&
+      isaNummber(Number(cashGiven.value))
+    ) {
+      var balanceAmount = Number(cashGiven.value) - Number(billamount.value);
+      if (balanceAmount === 0) {
+        returnDiv.classList.add("hidden");
+        change.innerText = `Customer gave exact amount. No Return amount`;
+      } else if (balanceAmount > 0) {
+        returnArr = [0, 0, 0, 0, 0, 0, 0];
+        var remainingAmount = balanceAmount;
+        for (var i = 0; i < notesArr.length; i++) {
+          returnArr[i] = Number.parseInt(remainingAmount / notesArr[i]);
+          remainingAmount = remainingAmount - returnArr[i] * notesArr[i];
+        }
+        updateTable(returnArr);
+        returnDiv.classList.remove("hidden");
+      } else {
+        returnDiv.classList.add("hidden");
+        change.innerText = `Customer still need's to give ${
+          Number(billamount.value) - Number(cashGiven.value)
+        } or more`;
+      }
+    } else {
+      change.innerHTML = "Enter Valid Integer for Bill and CASH amount";
+    }
+  }
+});
+
+function isaNummber(checkElement) {
+  if (checkElement > 0 && Number.isInteger(checkElement)) {
+    change.innerHTML = "";
+    return true;
+  } else {
+    return false;
+  }
 }
 
-function display(numberOfNotes, currentNote) {
-  notesRequired.innerHTML =
-    notesRequired.innerHTML + numberOfNotes + " notes of " + currentNote + "\n";
+function updateTable(givenArr) {
+  tbody = table.tBodies[0];
+  for (var i = 0; i < givenArr.length; i++) {
+    tbody.rows[i].cells[1].innerText = givenArr[i];
+  }
 }
