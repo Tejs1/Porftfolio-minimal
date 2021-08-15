@@ -73,7 +73,7 @@ a {
   align-items: center;
 }
 
-.navbar h1 {
+.navbar h1 a {
   font-family: "CircularStd-Book";
   border-right: 2px solid var(--black);
   color: var(--black);
@@ -82,10 +82,6 @@ a {
   margin-bottom: 2rem;
   cursor: pointer;
   list-style: none;
-}
-
-.navbar h1 a {
-  color: var(--black);
 }
 
 .navbar ul {
