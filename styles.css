@@ -20,7 +20,6 @@ body {
   --white: none;
   --navhover: #e3d4d4be;
   --socials: #c8c8c8;
-  --temp: rgba(233, 150, 150, 0.452);
 }
 
 section {
@@ -93,7 +92,6 @@ nav ul li {
   padding: 0.3rem 1rem;
   color: var(--black);
   border-bottom: 2px solid var(--black);
-  -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 .navbar ul a:hover {
@@ -105,7 +103,7 @@ nav ul li {
   font-weight: bold;
   background-color: var(--white);
   border-radius: 0.5rem;
-  background-color: var(--temp);
+  background-color: var(--navhover);
 }
 
 .main-img {
@@ -192,6 +190,7 @@ section h1 {
 }
 
 .container section a:hover {
+  background-color: var(--navhover);
   border-bottom: 2px solid var(--black);
 }
 
