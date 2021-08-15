@@ -73,17 +73,6 @@ a {
   align-items: center;
 }
 
-.navbar h1 a {
-  font-family: "CircularStd-Book";
-  border-right: 2px solid var(--black);
-  color: var(--black);
-  padding-right: 0.9rem;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  cursor: pointer;
-  list-style: none;
-}
-
 .navbar ul {
   display: -webkit-box;
   display: -ms-flexbox;
