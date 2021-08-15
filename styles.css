@@ -7,16 +7,42 @@ html,
 body {
   font-family: CircularStd-Book;
 }
+:root {
+  --black: #000000;
+  --whiteo: #fdf8f3;
+  --white: none;
+  --navhover: #e3d4d4be;
+  --socials: #c8c8c8;
+}
 
 section {
   letter-spacing: 2px;
 }
 
 .main-content {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0rem 1rem;
 }
 .bio {
   max-width: 600px;
   margin: auto;
+}
+.socials {
+}
+.socials a {
+  margin-left: 1rem;
+  font-size: 2.6rem;
+  text-decoration: none;
+  color: var(--black);
+  -webkit-box-direction: normal;
+  transition: all 0.3s ease;
+}
+.socials a:hover {
+  color: var(--socials);
+}
+/* 32:00 */
+.btn-links {
+  background-color: rgb(250, 215, 215);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--black);
 }
