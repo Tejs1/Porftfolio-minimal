@@ -7,3 +7,16 @@ html,
 body {
   font-family: CircularStd-Book;
 }
+
+section {
+  letter-spacing: 2px;
+}
+
+.main-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.bio {
+  max-width: 600px;
+  margin: auto;
+}
