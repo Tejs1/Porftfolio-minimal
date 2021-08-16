@@ -24,13 +24,13 @@ function clickHandler() {
     error2.innerText = "Please enter valid number";
   } else if (luck % number === 0 || luck % number === 5) {
     output.innerHTML = `<p class="img-para">YEAH! Your Birthdate is Lucky XD</p>
-    <img id="img" class="svg" src="images/lucky.svg" />`;
+    <img id="img" class="svg" src="./images/lucky.svg" />`;
     error1.innerText = "";
     error2.innerText = "";
   } else {
     output.innerHTML = `
     <p class="img-para">OOPS! Your Birthdate is not Lucky ;(</p>
-    <img id="img" class="svg" src="images/unlucky.svg" />`;
+    <img id="img" class="svg" src="./images/unlucky.svg" />`;
 
     error1.innerText = "";
     error2.innerText = "";

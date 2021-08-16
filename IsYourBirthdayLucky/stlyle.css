@@ -21,7 +21,7 @@ body {
   flex-direction: column;
 }
 .bc {
-  background-image: url(/images/main.svg);
+  background-image: url(./images/main.svg);
   width: 100vw;
   display: flex;
   justify-content: center;
