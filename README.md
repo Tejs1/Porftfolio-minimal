@@ -1,3 +1,3 @@
 # Porftfolio
 # hosted here
-https://tejs.netlify.app/
+https://tejs.me
