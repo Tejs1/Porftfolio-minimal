@@ -1,4 +1,4 @@
 This is a Brave Rewards publisher verification file.
 
 Domain: tejs.me
-Token: f5f24d3a130e8fa493f582e791dd230f250a72cf49779a77b8fd4e40c57c13fa
+Token: 3e1363cc7712e08074dc9da4e6907c817d52dc62eef6de360088417f338607f8
